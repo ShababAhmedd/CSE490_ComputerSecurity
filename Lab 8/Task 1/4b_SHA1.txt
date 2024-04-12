@@ -1,0 +1,71 @@
+                                                                                         
+┌──(kali㉿kali)-[~/Desktop]
+└─$ hashcat -m 100  -a 0 hashes.txt rockyou.txt 
+hashcat (v6.2.6) starting
+
+OpenCL API (OpenCL 3.0 PoCL 4.0+debian  Linux, None+Asserts, RELOC, SPIR, LLVM 15.0.7, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+==================================================================================================================================================
+* Device #1: cpu-sandybridge-Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz, 4201/8466 MB (2048 MB allocatable), 4MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+Hashfile 'hashes.txt' on line 1 (5f4dcc3b5aa765d61d8327deb882cf99): Token length exception
+
+* Token length exception: 1/2 hashes
+  This error happens if the wrong hash type is specified, if the hashes are
+  malformed, or if input is otherwise not as expected (for example, if the
+  --username option is used but no username is present)
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+* Early-Skip
+* Not-Salted
+* Not-Iterated
+* Single-Hash
+* Single-Salt
+* Raw-Hash
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Pure kernels can crack longer passwords, but drastically reduce performance.
+If you want to switch to optimized kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Temperature abort trigger set to 90c
+
+Host memory required for this attack: 1 MB
+
+Dictionary cache hit:
+* Filename..: rockyou.txt
+* Passwords.: 14344385
+* Bytes.....: 139921507
+* Keyspace..: 14344385
+
+aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d:hello            
+                                                          
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 100 (SHA1)
+Hash.Target......: aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
+Time.Started.....: Fri Apr 12 12:33:37 2024 (0 secs)
+Time.Estimated...: Fri Apr 12 12:33:37 2024 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  4177.6 kH/s (0.23ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 4096/14344385 (0.03%)
+Rejected.........: 0/4096 (0.00%)
+Restore.Point....: 0/14344385 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 123456 -> oooooo
+Hardware.Mon.#1..: Util: 21%
+
+Started: Fri Apr 12 12:33:22 2024
+Stopped: Fri Apr 12 12:33:40 2024
+                     

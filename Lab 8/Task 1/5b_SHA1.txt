@@ -1,0 +1,33 @@
+┌──(kali㉿kali)-[~/Desktop]
+└─$ hashcat -m 100 -a 3 hashes.txt rockyou.txt 
+hashcat (v6.2.6) starting
+
+OpenCL API (OpenCL 3.0 PoCL 4.0+debian  Linux, None+Asserts, RELOC, SPIR, LLVM 15.0.7, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+==================================================================================================================================================
+* Device #1: cpu-sandybridge-Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz, 4201/8466 MB (2048 MB allocatable), 4MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+Hashfile 'hashes.txt' on line 1 (5f4dcc3b5aa765d61d8327deb882cf99): Token length exception
+
+* Token length exception: 1/2 hashes
+  This error happens if the wrong hash type is specified, if the hashes are
+  malformed, or if input is otherwise not as expected (for example, if the
+  --username option is used but no username is present)
+
+INFO: All hashes found as potfile and/or empty entries! Use --show to display them.
+
+Started: Fri Apr 12 12:39:24 2024
+Stopped: Fri Apr 12 12:39:25 2024
+                                                                                         
+┌──(kali㉿kali)-[~/Desktop]
+└─$ hashcat -m 100 -a 3 --show hashes.txt rockyou.txt
+Hashfile 'hashes.txt' on line 1 (5f4dcc3b5aa765d61d8327deb882cf99): Token length exception                                                                                        
+
+* Token length exception: 1/2 hashes
+  This error happens if the wrong hash type is specified, if the hashes are
+  malformed, or if input is otherwise not as expected (for example, if the
+  --username option is used but no username is present)
+
+aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d:hello

@@ -1,0 +1,18 @@
+┌──(kali㉿kali)-[~]
+└─$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ cd Desktop
+
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cat > hashes.txt
+5f4dcc3b5aa765d61d8327deb882cf99
+aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
+
+┌──(kali㉿kali)-[~/Desktop]
+└─$ hashcat -m 0  -a 0  hashes.txt rockyou.txt
+
+┌──(kali㉿kali)-[~/Desktop]
+└─$ hashcat -m 0  -a 3  hashes.txt rockyou.txt
+
